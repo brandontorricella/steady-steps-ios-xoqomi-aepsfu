@@ -8,11 +8,6 @@
     "icon": "./assets/images/feaff8e1-9cfa-4034-861c-72f3f58b0562.png",
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
-    "splash": {
-      "image": "./assets/images/feaff8e1-9cfa-4034-861c-72f3f58b0562.png",
-      "resizeMode": "contain",
-      "backgroundColor": "#FFFFFF"
-    },
     "ios": {
       "supportsTablet": true,
       "bundleIdentifier": "com.steadysteps.app",
