@@ -1,6 +1,6 @@
 
 import React, { useRef, useState, useCallback } from 'react';
-import { StyleSheet, View, ActivityIndicator, Platform } from 'react-native';
+import { StyleSheet, View, ActivityIndicator, Platform, Linking } from 'react-native';
 import { WebView } from 'react-native-webview';
 import { useTheme } from '@react-navigation/native';
 import { SafeAreaView } from 'react-native-safe-area-context';
@@ -27,6 +27,25 @@ export default function HomeScreen() {
     console.error('WebView error:', nativeEvent);
   };
 
+  // Handle external links - open in Safari
+  const handleShouldStartLoadWithRequest = (request: any) => {
+    const url = request.url;
+    console.log('Navigation request to:', url);
+
+    // Allow the main app URL and its subdomains
+    if (url.startsWith(WEB_APP_URL)) {
+      console.log('Loading internal URL in WebView:', url);
+      return true;
+    }
+
+    // Open external URLs in Safari
+    console.log('Opening external URL in Safari:', url);
+    Linking.openURL(url).catch((err) => {
+      console.error('Failed to open URL in Safari:', err);
+    });
+    return false;
+  };
+
   const loadingIndicatorColor = theme.dark ? '#fff' : '#000';
 
   return (
@@ -41,6 +60,7 @@ export default function HomeScreen() {
         onLoadStart={handleLoadStart}
         onLoadEnd={handleLoadEnd}
         onError={handleError}
+        onShouldStartLoadWithRequest={handleShouldStartLoadWithRequest}
         allowsBackForwardNavigationGestures={true}
         sharedCookiesEnabled={true}
         javaScriptEnabled={true}
@@ -48,6 +68,7 @@ export default function HomeScreen() {
         startInLoadingState={false}
         scalesPageToFit={true}
         bounces={true}
+        originWhitelist={['*']}
       />
       {isLoading && (
         <View style={styles.loadingContainer}>
