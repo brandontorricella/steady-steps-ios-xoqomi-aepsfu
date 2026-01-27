@@ -2,42 +2,60 @@
 {
   "expo": {
     "name": "Steady Steps",
-    "slug": "steady-steps",
+    "slug": "Steady Steps",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/images/natively-dark.png",
+    "icon": "./assets/images/feaff8e1-9cfa-4034-861c-72f3f58b0562.png",
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
     "splash": {
-      "image": "./assets/images/natively-dark.png",
+      "image": "./assets/images/c279d781-f766-420d-85cb-27c485454a94.jpeg",
       "resizeMode": "contain",
-      "backgroundColor": "#000000"
+      "backgroundColor": "#FFFFFF"
     },
     "ios": {
       "supportsTablet": true,
       "bundleIdentifier": "com.steadysteps.app",
       "infoPlist": {
-        "ITSAppUsesNonExemptEncryption": false
+        "ITSAppUsesNonExemptEncryption": false,
+        "NSCameraUsageDescription": false,
+        "NSLocationWhenInUseUsageDescription": false,
+        "NSLocationAlwaysUsageDescription": false,
+        "NSContactsUsageDescription": false,
+        "NSHealthShareUsageDescription": false,
+        "NSHealthUpdateUsageDescription": false
       }
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./assets/images/natively-dark.png",
-        "backgroundColor": "#000000"
+        "foregroundImage": "./assets/images/feaff8e1-9cfa-4034-861c-72f3f58b0562.png",
+        "backgroundColor": "#FFFFFF"
       },
       "edgeToEdgeEnabled": true,
-      "package": "com.steadysteps.app"
+      "package": "com.steadysteps.app",
+      "permissions": [
+        "INTERNET",
+        "ACCESS_NETWORK_STATE"
+      ]
     },
     "web": {
-      "favicon": "./assets/images/final_quest_240x240.png",
+      "favicon": "./assets/images/feaff8e1-9cfa-4034-861c-72f3f58b0562.png",
       "bundler": "metro"
     },
     "plugins": [
       "expo-font",
       "expo-router",
-      "expo-web-browser"
+      "expo-web-browser",
+      [
+        "expo-notifications",
+        {
+          "icon": "./assets/images/feaff8e1-9cfa-4034-861c-72f3f58b0562.png",
+          "color": "#5CB89A",
+          "sounds": []
+        }
+      ]
     ],
-    "scheme": "steadysteps",
+    "scheme": "Steady Steps",
     "experiments": {
       "typedRoutes": true
     },
