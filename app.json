@@ -1,4 +1,3 @@
-
 {
   "expo": {
     "name": "Steady Steps",
@@ -55,7 +54,8 @@
       "typedRoutes": true
     },
     "extra": {
-      "router": {}
+      "router": {},
+      "backendUrl": "https://u8am537ubm3yp5v4h2jj6w2yh9kp4j5b.app.specular.dev"
     }
   }
 }
