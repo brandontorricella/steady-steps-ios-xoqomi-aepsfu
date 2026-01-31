@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "Steady Steps",
-    "slug": "Steady Steps",
+    "name": "steadysteps",
+    "slug": "steadysteps",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/feaff8e1-9cfa-4034-861c-72f3f58b0562.png",
@@ -49,7 +49,7 @@
         }
       ]
     ],
-    "scheme": "Steady Steps",
+    "scheme": "steadysteps",
     "experiments": {
       "typedRoutes": true
     },
